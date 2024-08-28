@@ -1,0 +1,108 @@
+.projects {
+  padding: 4rem 2rem;
+  background-color: inherit; /* Inherit background color for dark mode */
+}
+
+.projects h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: inherit; /* Inherit text color for dark mode */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projects-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project-item {
+  background-color: #ffffff; /* Default light mode */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-item h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2b6cb0; /* Blue color for light mode */
+  margin-bottom: 0.5rem;
+}
+
+.project-item p {
+  font-size: 1rem;
+  color: #4a5568; /* Dark gray text for light mode */
+  margin-bottom: 1rem;
+}
+
+.project-item ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-item ul li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #4a5568; /* Dark gray text for light mode */
+}
+
+.project-item a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #3182ce;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.project-item a:hover {
+  background-color: #2b6cb0;
+}
+
+@media (max-width: 768px) {
+  .project-item {
+    max-width: 100%;
+  }
+}
+
+/* Dark mode specific styles */
+.dark-mode .projects {
+  background-color: #111111;
+}
+
+.dark-mode .project-item {
+  background-color: #2d3748; /* Darker background for dark mode */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Stronger shadow for dark mode */
+}
+
+.dark-mode .project-item h2 {
+  color: #63b3ed; /* Light blue text for dark mode */
+}
+
+.dark-mode .project-item p,
+.dark-mode .project-item ul li {
+  color: #cbd5e0; /* Lighter text for dark mode */
+}
+
+.dark-mode .project-item a {
+  background-color: #63b3ed; /* Light blue button for dark mode */
+}
+
+.dark-mode .project-item a:hover {
+  background-color: #4299e1;
+}

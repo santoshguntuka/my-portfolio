@@ -1,0 +1,209 @@
+/* Define the common background and text colors */
+:root {
+  --footer-bg-color: #2c3e50; /* Dark grayish-blue color for the footer and navbar */
+  --footer-text-color: #ffffff; /* White text for contrast */
+}
+
+/* Base styles for the home page */
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: inherit; /* Inherit background color for dark/light mode */
+  color: inherit; /* Inherit text color for dark/light mode */
+}
+
+/* Centering and styling the content */
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px; /* Constrain width for better alignment */
+  margin: 0 auto;
+}
+
+/* Name and Title */
+.text-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: inherit;
+}
+
+.text-section p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: inherit;
+}
+
+/* Resume Button */
+.btn-resume {
+  padding: 0.75rem 1.5rem;
+  background-color: #3182ce;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-bottom: 2rem; /* Space below the button */
+}
+
+.btn-resume:hover {
+  background-color: #2b6cb0;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.5rem; /* Space between the button and the icons */
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Image */
+.image-section {
+  margin-top: 2rem;
+}
+
+.image-section img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Navbar styling */
+.navbar {
+  width: 100%;
+  background-color: var(--footer-bg-color); /* Use the same background color as the footer */
+  color: var(--footer-text-color); /* Use the same text color as the footer */
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center; /* Centering the content */
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 999;
+}
+
+/* Navbar links */
+.navbar a {
+  color: var(--footer-text-color); /* Ensure all links have the same color */
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styling */
+.footer {
+  background-color: var(--footer-bg-color); /* Same background color as navbar */
+  color: var(--footer-text-color); /* Same text color as navbar */
+  padding: 1rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Footer links */
+.footer a {
+  color: var(--footer-text-color); /* Same color as text */
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Dark Mode Toggle Switch */
+.switch-container {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--footer-bg-color); /* Match the background with footer/navbar */
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+  z-index: 1000;
+}
+
+/* Switch styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}

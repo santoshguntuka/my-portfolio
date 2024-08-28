@@ -1,0 +1,89 @@
+.contact {
+  padding: 4rem 2rem; /* Adjust padding as needed */
+  background-color: inherit; /* Inherit background color from global styles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 70px); /* Adjust based on navbar and footer height */
+}
+
+.contact-content {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  flex: 1; /* Ensure the content takes up the remaining space */
+}
+
+.contact h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: inherit; /* Inherit text color from global styles */
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: inherit; /* Inherit text color from global styles */
+  background-color: inherit; /* Inherit background color from global styles */
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.btn-submit {
+  padding: 0.75rem 1.5rem;
+  background-color: #3182ce;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #2b6cb0;
+}
+
+.status {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: inherit; /* Inherit text color from global styles */
+}
+
+/* Dark mode specific styles */
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  border: 1px solid #4a5568;
+  background-color: #2d3748;
+  color: #ffffff;
+}
+
+.dark-mode .contact h1 {
+  color: #ffffff;
+}
+
+.dark-mode .status {
+  color: #ffffff;
+}
