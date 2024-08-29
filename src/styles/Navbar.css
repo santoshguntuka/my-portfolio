@@ -1,37 +1,41 @@
+/* Navbar.css */
+
 .navbar {
+  background-color: #333; /* Dark background color */
+  color: white; /* White text color */
+  padding: 1rem 2rem; /* Padding around the navbar */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: rgba(45, 55, 72, 0.8); /* Semi-transparent background */
-  box-shadow: none; /* Remove the shadow for a flat look */
-  position: fixed; /* Keep the navbar at the top even when scrolling */
-  top: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure the navbar stays on top */
+  justify-content: center; /* Center everything horizontally */
+  align-items: center; /* Center items vertically */
+  flex-direction: column; /* Stack brand and links vertically */
 }
 
-.navbar-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem; /* Space between links */
+.navbar h1 {
   margin: 0;
-  padding: 0;
-  width: 100%; /* Make sure the list takes up the full width */
-  max-width: 800px; /* Optionally, limit the max width */
+  margin-bottom: 1rem; /* Add some space between the brand and the links */
 }
 
-.navbar-list li {
-  font-size: 1rem; /* Adjust font size */
+.navbar-links {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Display links horizontally */
+  gap: 1rem; /* Space between each link */
+  justify-content: center; /* Center the links */
 }
 
-.navbar-list li a {
-  color: #ffffff; /* White color for readability */
-  text-decoration: none;
-  transition: color 0.3s ease;
+.navbar-links li {
+  margin: 0; /* Remove margin */
 }
 
-.navbar-list li a:hover {
-  color: #63b3ed; /* Change color on hover */
+.navbar-links li a {
+  color: white; /* White text color for links */
+  text-decoration: none; /* Remove underline from links */
+  padding: 0.5rem 1rem; /* Padding for each link */
+  display: inline-block; /* Ensure the links are inline */
+}
+
+.navbar-links li a:hover {
+  background-color: #444; /* Darker background on hover */
+  border-radius: 0.25rem; /* Slightly round the corners on hover */
 }

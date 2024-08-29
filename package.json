@@ -2,11 +2,11 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://santoshguntuka.github.io/my-portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.7.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",
@@ -14,8 +14,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start-server": "serve -s build -l 5000",
-    "build": "react-scripts build && npm run start-server"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -36,9 +40,6 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "gh-pages": "^6.1.1",
-    "postcss": "^8.4.41",
-    "tailwindcss": "^3.4.10"
+    "gh-pages": "^6.1.1"
   }
 }

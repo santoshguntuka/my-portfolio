@@ -8,18 +8,20 @@ function Home() {
         <div className="text-section">
           <h1>Hey, I'm Santosh Guntuka</h1>
           <p>Software Developer</p>
-          <a href="/cs.pdf" download="santosh_guntuka_Resume.pdf" className="btn-resume">Download Resume</a>
+          <a href={`${process.env.PUBLIC_URL}/cs.pdf`} download="santosh_guntuka_Resume.pdf" className="btn-resume">
+            Download Resume
+          </a>
           <div className="social-links">
             <a href="https://www.linkedin.com/in/santoshguntuka" target="_blank" rel="noopener noreferrer">
-              <img src="/linkedin-icon.png" alt="LinkedIn" className="social-icon" />
+              <img src={`${process.env.PUBLIC_URL}/linkedin-icon.png`} alt="LinkedIn" className="social-icon" />
             </a>
             <a href="https://github.com/santoshguntuka" target="_blank" rel="noopener noreferrer">
-              <img src="/github-icon.png" alt="GitHub" className="social-icon" />
+              <img src={`${process.env.PUBLIC_URL}/github-icon.png`} alt="GitHub" className="social-icon" />
             </a>
           </div>
         </div>
         <div className="image-section">
-          <img src="/1577159321637.jpeg" alt="Santosh Guntuka" />
+          <img src={`${process.env.PUBLIC_URL}/1577159321637.jpeg`} alt="Santosh Guntuka" />
         </div>
       </div>
     </section>
@@ -27,3 +29,4 @@ function Home() {
 }
 
 export default Home;
+
