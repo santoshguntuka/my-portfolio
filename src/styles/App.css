@@ -8,6 +8,7 @@ html, body {
   transition: background-color 0.3s ease, color 0.3s ease;
   background-color: #ffffff; /* Default background color */
   color: #111111; /* Default text color */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Container for the entire application */
@@ -17,6 +18,7 @@ html, body {
   flex-direction: column;
   background-color: inherit; /* Inherit background color */
   color: inherit; /* Inherit text color */
+  padding: 1rem; /* Add padding for better spacing */
 }
 
 /* Main content area */
@@ -26,7 +28,7 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem; /* Adjust padding for better spacing */
   background-color: inherit; /* Inherit background color */
   color: inherit; /* Inherit text color */
 }
@@ -35,7 +37,7 @@ html, body {
 .navbar {
   background-color: #0a3d62; /* Dark teal background for navbar */
   color: #ffffff; /* White text color for navbar */
-  padding: 0.5rem 1rem; /* Reduced padding for thinner appearance */
+  padding: 1rem; /* Increase padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,9 +63,9 @@ html, body {
 .footer {
   background-color: #0a3d62; /* Dark teal background for footer */
   color: #ffffff; /* White text color for footer */
-  padding: 0.25rem 1rem; /* Reduced padding for thinner appearance */
+  padding: 1rem; /* Increased padding for better spacing */
   display: flex;
-  justify-content: space-between; /* Space content evenly */
+  justify-content: center; /* Center content horizontally */
   align-items: center;
   width: 100%; /* Full width */
   box-sizing: border-box; /* Include padding in width */
@@ -73,6 +75,7 @@ html, body {
 
 .footer-content {
   display: flex;
+  flex-direction: row; /* Default to row layout for larger screens */
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -112,26 +115,22 @@ html, body {
   color: #ffffff;
 }
 
-.light-mode .navbar, .light-mode .footer {
-  background-color: #0a3d62; /* Dark teal background for navbar and footer in light mode */
-  color: #ffffff; /* White text color for navbar and footer in light mode */
-}
-
+.light-mode .navbar, .light-mode .footer,
 .dark-mode .navbar, .dark-mode .footer {
-  background-color: #0a3d62; /* Dark teal background for navbar and footer in dark mode */
-  color: #ffffff; /* White text color for navbar and footer in dark mode */
+  background-color: #0a3d62; /* Dark teal background for navbar and footer */
+  color: #ffffff; /* White text color for navbar and footer */
 }
 
 /* Switch container styles */
 .switch-container {
-  position: fixed;          /* Keeps the toggle fixed in position */
-  top: 20px;                /* Distance from the top of the viewport */
-  right: 20px;              /* Distance from the right of the viewport */
+  position: fixed; /* Keeps the toggle fixed in position */
+  top: 20px; /* Distance from the top of the viewport */
+  right: 20px; /* Distance from the right of the viewport */
   display: flex;
   align-items: center;
-  justify-content: center;  /* Center align horizontally */
+  justify-content: center; /* Center align horizontally */
   gap: 0.5rem;
-  z-index: 1001;            /* Ensure it's higher than the navbar */
+  z-index: 1001; /* Ensure it's higher than the navbar */
   background-color: inherit;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -186,19 +185,49 @@ input:checked + .slider:before {
 
 /* Label styling */
 .switch-container label {
-  font-size: 1rem;           /* Font size for the label */
-  color: inherit;            /* Use the inherited color for the text */
-  margin-left: 0.5rem;       /* Spacing between the switch and label */
+  font-size: 1rem; /* Font size for the label */
+  color: inherit; /* Use the inherited color for the text */
+  margin-left: 0.5rem; /* Spacing between the switch and label */
 }
 
 /* Additional Styles for Responsiveness */
 @media (max-width: 768px) {
   .navbar, .footer {
-    padding: 0.5rem 1rem;
+    padding: 1rem; /* Increase padding for better touch targets */
   }
 
   .footer-content {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack footer content vertically */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text */
+  }
+
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 0.5rem; /* Space between links */
+    width: 100%; /* Full width for mobile links */
+    text-align: center; /* Center align text */
+  }
+
+  .switch-container {
+    top: 10px; /* Reduce distance from the top for smaller screens */
+    right: 10px; /* Reduce distance from the right for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    padding: 0 1rem; /* Add horizontal padding for small screens */
+  }
+
+  .switch-container {
+    top: 5px; /* Further reduce top distance for very small screens */
+    right: 5px; /* Further reduce right distance for very small screens */
   }
 }

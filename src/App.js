@@ -20,6 +20,7 @@ function AppContent() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Home />} /> {/* Fallback to Home */}
         </Routes>
       </div>
     </div>
@@ -29,7 +30,7 @@ function AppContent() {
 function App() {
   return (
     <DarkModeProvider>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <AppContent />
       </Router>
     </DarkModeProvider>

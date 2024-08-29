@@ -5,9 +5,11 @@
   color: white; /* White text color */
   padding: 1rem 2rem; /* Padding around the navbar */
   display: flex;
-  justify-content: center; /* Center everything horizontally */
-  align-items: center; /* Center items vertically */
   flex-direction: column; /* Stack brand and links vertically */
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Ensure navbar takes full width */
+  box-sizing: border-box; /* Include padding and border in width */
+  position: relative; /* Position relative for possible child elements */
 }
 
 .navbar h1 {
@@ -38,4 +40,16 @@
 .navbar-links li a:hover {
   background-color: #444; /* Darker background on hover */
   border-radius: 0.25rem; /* Slightly round the corners on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Stack links vertically on small screens */
+    gap: 0.5rem; /* Reduced space between links */
+  }
 }
