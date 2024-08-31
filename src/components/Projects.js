@@ -26,6 +26,7 @@ function Projects() {
       ],
     },
     {
+<<<<<<< HEAD
   "title": "Article Vault - Chrome Extension",
   "description": "A Chrome extension to save and organize articles for later reading.",
   "technologies": ["JavaScript", "HTML", "CSS", "Chrome Extensions API"],
@@ -39,6 +40,18 @@ function Projects() {
   ]
 },
 
+=======
+      title: 'Federated Learning Setup in PySyft',
+      description: 'E2E example on breast cancer dataset using PySyft federated learning.',
+      technologies: ['Python', 'PyTorch', 'PySyft'],
+      link: 'https://github.com/santoshguntuka/pySyft',
+      details: [
+        'Utilized the concept of federated learning by implementing PySyft, a Python library for secure and private machine learning, to enable decentralized training across multiple nodes while ensuring data privacy.',
+        'Developed an end-to-end example using a hospital setup to demonstrate the application of federated learning, showcasing how sensitive medical data can be securely shared and collaboratively analyzed without ever leaving the original locations.',
+        'Successfully established and coordinated a federated learning setup across multiple collaborators, ensuring data privacy compliance and enabling joint model training across different institutions, leading to improved model accuracy and convergence speed.',
+      ],
+    },
+>>>>>>> 7d08da0 (Initial commit)
   ];
 
   return (
