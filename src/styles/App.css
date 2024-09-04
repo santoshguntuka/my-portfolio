@@ -6,14 +6,9 @@ html, body {
   width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
-<<<<<<< HEAD
   background-color: #ffffff; /* Default background color */
   color: #111111; /* Default text color */
   overflow-x: hidden; /* Prevent horizontal scrolling */
-=======
-  background-color: inherit; /* Inherit background color for dark/light mode */
-  color: inherit; /* Inherit text color for dark/light mode */
->>>>>>> 7d08da0 (Initial commit)
 }
 
 /* Container for the entire application */
@@ -23,10 +18,7 @@ html, body {
   flex-direction: column;
   background-color: inherit; /* Inherit background color */
   color: inherit; /* Inherit text color */
-<<<<<<< HEAD
   padding: 1rem; /* Add padding for better spacing */
-=======
->>>>>>> 7d08da0 (Initial commit)
 }
 
 /* Main content area */
@@ -36,16 +28,11 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
-  padding: 1rem; /* Adjust padding for better spacing */
-=======
   padding: 2rem;
->>>>>>> 7d08da0 (Initial commit)
   background-color: inherit; /* Inherit background color */
   color: inherit; /* Inherit text color */
 }
 
-<<<<<<< HEAD
 /* Navbar */
 .navbar {
   background-color: #0a3d62; /* Dark teal background for navbar */
@@ -84,29 +71,11 @@ html, body {
   box-sizing: border-box; /* Include padding in width */
   margin-top: auto; /* Pushes the footer to the bottom of the container */
   font-size: 0.9rem; /* Smaller font size for a sleeker look */
-=======
-/* Footer */
-.footer {
-  background-color: var(--footer-bg-color); /* Consistent background color */
-  color: var(--footer-text-color); /* Consistent text color */
-  padding: 0.5rem 1rem; /* Reduce padding for lower height */
-  display: flex;
-  justify-content: space-between; /* Space content evenly */
-  align-items: center;
-  width: 100%; /* Full width */
-  box-sizing: border-box; /* Include padding in width */
-  flex-shrink: 0; /* Prevent footer from shrinking */
-  position: relative; /* Positioned at the bottom */
-  margin-top: auto; /* Pushes the footer to the bottom of the container */
->>>>>>> 7d08da0 (Initial commit)
 }
 
 .footer-content {
   display: flex;
-<<<<<<< HEAD
   flex-direction: row; /* Default to row layout for larger screens */
-=======
->>>>>>> 7d08da0 (Initial commit)
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -117,7 +86,6 @@ html, body {
 
 .social-links {
   display: flex;
-<<<<<<< HEAD
   gap: 0.75rem; /* Space between social links */
 }
 
@@ -125,15 +93,6 @@ html, body {
   color: inherit;
   text-decoration: none;
   font-size: 0.9rem; /* Consistent font size with the rest */
-=======
-  gap: 1rem; /* Space between social links */
-}
-
-.social-links a {
-  color: var(--footer-text-color);
-  text-decoration: none;
-  font-size: 1rem;
->>>>>>> 7d08da0 (Initial commit)
 }
 
 .social-links a:hover {
@@ -142,11 +101,7 @@ html, body {
 
 .footer p {
   margin: 0; /* Remove margin for better alignment */
-<<<<<<< HEAD
   font-size: 0.9rem; /* Smaller font size for a sleeker look */
-=======
-  font-size: 1rem;
->>>>>>> 7d08da0 (Initial commit)
 }
 
 /* Light and dark mode styles */
@@ -160,7 +115,6 @@ html, body {
   color: #ffffff;
 }
 
-<<<<<<< HEAD
 .light-mode .navbar, .light-mode .footer,
 .dark-mode .navbar, .dark-mode .footer {
   background-color: #0a3d62; /* Dark teal background for navbar and footer */
@@ -181,20 +135,6 @@ html, body {
   padding: 0.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: add a slight shadow for better visibility */
-=======
-/* Switch container styles */
-.switch-container {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  z-index: 1000;
-  background-color: inherit;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
->>>>>>> 7d08da0 (Initial commit)
 }
 
 /* Switch component styles */
@@ -242,7 +182,6 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(14px);
 }
-<<<<<<< HEAD
 
 /* Label styling */
 .switch-container label {
@@ -292,5 +231,3 @@ input:checked + .slider:before {
     right: 5px; /* Further reduce right distance for very small screens */
   }
 }
-=======
->>>>>>> 7d08da0 (Initial commit)
