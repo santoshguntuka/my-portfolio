@@ -5,7 +5,6 @@ import Home from './components/Home';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
 import { DarkModeProvider, useDarkMode } from './DarkModeContext';
 import './styles/App.css';
 
@@ -24,7 +23,7 @@ function AppContent() {
           <Route path="*" element={<Home />} /> {/* Fallback to Home for unknown routes */}
         </Routes>
       </div>
-      <Footer />
+      {/* Footer is removed here */}
     </div>
   );
 }

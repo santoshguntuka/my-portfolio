@@ -1,94 +1,163 @@
-<<<<<<< HEAD
-/* Navbar.css */
-
+/* General Navbar Styles */
 .navbar {
-  background-color: #333; /* Dark background color */
-  color: white; /* White text color */
-  padding: 1rem 2rem; /* Padding around the navbar */
   display: flex;
-  flex-direction: column; /* Stack brand and links vertically */
-  align-items: center; /* Center items vertically */
-  width: 100%; /* Ensure navbar takes full width */
-  box-sizing: border-box; /* Include padding and border in width */
-  position: relative; /* Position relative for possible child elements */
+  justify-content: center; /* Center the navbar contents */
+  align-items: center;
+  padding: 0.25rem 0.5rem; /* Make the navbar thinner */
+  background-color: rgba(45, 55, 72, 0.8); /* Semi-transparent background */
+  position: fixed; /* Fixed navbar */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the navbar stays on top */
+  color: white; /* White text color */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  margin: 0; /* Remove any margin */
 }
 
-.navbar h1 {
-  margin: 0;
-  margin-bottom: 1rem; /* Add some space between the brand and the links */
-}
-
-.navbar-links {
-  list-style: none; /* Remove default list styling */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-  display: flex; /* Display links horizontally */
-  gap: 1rem; /* Space between each link */
+/* Navbar List */
+.navbar-links, .navbar-list {
+  list-style: none;
+  display: flex;
   justify-content: center; /* Center the links */
+  gap: 1rem; /* Space between links */
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Take up the full width */
+  max-width: 1200px; /* Limit the maximum width */
+  box-sizing: border-box; /* Include padding and borders in width */
 }
 
-.navbar-links li {
-  margin: 0; /* Remove margin */
-}
-
-.navbar-links li a {
-  color: white; /* White text color for links */
-  text-decoration: none; /* Remove underline from links */
-  padding: 0.5rem 1rem; /* Padding for each link */
+/* Links */
+.navbar-links li a, .navbar-list li a {
+  color: #ffffff; /* White color for readability */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0.75rem; /* Adjusted padding to make the navbar thinner */
   display: inline-block; /* Ensure the links are inline */
 }
 
-.navbar-links li a:hover {
+/* Hover Effects */
+.navbar-links li a:hover, .navbar-list li a:hover {
+  color: #63b3ed; /* Change color on hover */
   background-color: #444; /* Darker background on hover */
   border-radius: 0.25rem; /* Slightly round the corners on hover */
 }
 
-/* Responsive design for smaller screens */
+/* Dark Mode Styling */
+.navbar.dark-mode {
+  background-color: #333; /* Dark background color */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
-    padding: 1rem; /* Adjust padding for smaller screens */
+    padding: 0.5rem; /* Adjust padding for smaller screens */
   }
 
-  .navbar-links {
+  .navbar-links, .navbar-list {
     flex-direction: column; /* Stack links vertically on small screens */
     gap: 0.5rem; /* Reduced space between links */
   }
-=======
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: rgba(45, 55, 72, 0.8); /* Semi-transparent background */
-  box-shadow: none; /* Remove the shadow for a flat look */
-  position: fixed; /* Keep the navbar at the top even when scrolling */
-  top: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure the navbar stays on top */
 }
 
-.navbar-list {
-  list-style: none;
+/* Center Aligning Page Content */
+.content {
   display: flex;
-  justify-content: center;
-  gap: 2rem; /* Space between links */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically if needed */
+  min-height: calc(100vh - 50px); /* Adjust height dynamically, assuming navbar height is 50px */
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Center the text content */
+  width: 100%; /* Take up the full width */
+  max-width: 1200px; /* Center and limit the width */
+  box-sizing: border-box; /* Include padding and borders in width */
+}
+
+/* Body and HTML */
+html, body {
   margin: 0;
   padding: 0;
-  width: 100%; /* Make sure the list takes up the full width */
-  max-width: 800px; /* Optionally, limit the max width */
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  box-sizing: border-box; /* Ensure padding is included in width */
 }
 
-.navbar-list li {
-  font-size: 1rem; /* Adjust font size */
+/* Dark Mode Switch */
+.switch-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 0.5rem;
 }
 
-.navbar-list li a {
-  color: #ffffff; /* White color for readability */
-  text-decoration: none;
-  transition: color 0.3s ease;
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
 }
 
-.navbar-list li a:hover {
-  color: #63b3ed; /* Change color on hover */
->>>>>>> 7d08da0 (Initial commit)
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+.round {
+  border-radius: 34px;
+}
+
+.round:before {
+  border-radius: 50%;
+}
+.social-icon {
+  width: 40px; /* Ensure all icons have the same size */
+  height: 40px; /* Match the height as well */
+  margin: 0 10px;
+}
+
+.chrome-extension-promo {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.chrome-extension-promo p {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
 }
