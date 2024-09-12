@@ -38,6 +38,18 @@ function Projects() {
     "Successfully deployed the extension to the Chrome Web Store, enabling users worldwide to download and use the tool for efficient article management."
   ]
 },
+    {
+  "title": "Chess AI engine ",
+  "description": "A chess AI engine using Python, Pygame, and TensorFlow to play autonomously and predict moves based on large chess datasets.",
+  "technologies": ["Python", "Tensorflow", "Pygame"],
+  "link": "https://github.com/santoshguntuka/chess_engine.git",
+  "details": [
+    "Developed a chess AI engine using Python, Pygame, and TensorFlow to play autonomously and predict moves based on large chess datasets.",
+    "Designed and implemented data preprocessing pipelines for efficient PGN file processing and incremental training of the neural network.",
+    "Optimized model performance through advanced neural network architectures, dropout, and batch processing techniques.",
+    "Enhanced the Pygame UI for real-time chessboard updates, intuitive user interaction, and visual improvements."
+  ]
+}
 
   ];
 
