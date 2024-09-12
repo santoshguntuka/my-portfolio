@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/santoshguntuka/my-portfolio/static/css/main.e555bb82.css",
+    "main.js": "/santoshguntuka/my-portfolio/static/js/main.793dd7e6.js",
+    "index.html": "/santoshguntuka/my-portfolio/index.html",
+    "main.e555bb82.css.map": "/santoshguntuka/my-portfolio/static/css/main.e555bb82.css.map",
+    "main.793dd7e6.js.map": "/santoshguntuka/my-portfolio/static/js/main.793dd7e6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e555bb82.css",
+    "static/js/main.793dd7e6.js"
+  ]
+}
