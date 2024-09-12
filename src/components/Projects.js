@@ -29,7 +29,7 @@ function Projects() {
   "title": "Article Vault - Chrome Extension",
   "description": "A Chrome extension to save and organize articles for later reading.",
   "technologies": ["JavaScript", "HTML", "CSS", "Chrome Extensions API"],
-  "link": "https://github.com/santoshguntuka/article-vault",
+  "link": "https://chromewebstore.google.com/detail/article-vault/kgnmgmnoanljhgenpjphamjlpcadbmim",
   "details": [
     "Developed a Chrome extension to enable users to save and organize web articles under different tags, making it easier to manage and retrieve content for later reading.",
     "Designed and built a user-friendly interface with responsive elements, ensuring a seamless user experience on both desktop and mobile browsers.",
