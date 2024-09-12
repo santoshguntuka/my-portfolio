@@ -1,0 +1,233 @@
+/* Base styles for the entire application */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #ffffff; /* Default background color */
+  color: #111111; /* Default text color */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Container for the entire application */
+.app-container {
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  background-color: inherit; /* Inherit background color */
+  color: inherit; /* Inherit text color */
+  padding: 1rem; /* Add padding for better spacing */
+}
+
+/* Main content area */
+.content {
+  flex: 1; /* Takes up available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: inherit; /* Inherit background color */
+  color: inherit; /* Inherit text color */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0a3d62; /* Dark teal background for navbar */
+  color: #ffffff; /* White text color for navbar */
+  padding: 1rem; /* Increase padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Navbar links */
+.navbar-links a {
+  color: #ffffff; /* White text color for links */
+  text-decoration: none;
+  padding: 0 0.75rem; /* Slightly reduced padding between links */
+  font-size: 0.9rem; /* Smaller font size for thinner appearance */
+}
+
+.navbar-links a:hover {
+  color: #b2bec3; /* Lighter color on hover */
+}
+
+/* Footer */
+.footer {
+  background-color: #0a3d62; /* Dark teal background for footer */
+  color: #ffffff; /* White text color for footer */
+  padding: 1rem; /* Increased padding for better spacing */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding in width */
+  margin-top: auto; /* Pushes the footer to the bottom of the container */
+  font-size: 0.9rem; /* Smaller font size for a sleeker look */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row; /* Default to row layout for larger screens */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Center content */
+  flex-wrap: wrap; /* Ensure wrapping on small screens */
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem; /* Space between social links */
+}
+
+.social-links a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.9rem; /* Consistent font size with the rest */
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 0; /* Remove margin for better alignment */
+  font-size: 0.9rem; /* Smaller font size for a sleeker look */
+}
+
+/* Light and dark mode styles */
+.light-mode {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+.dark-mode {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.light-mode .navbar, .light-mode .footer,
+.dark-mode .navbar, .dark-mode .footer {
+  background-color: #0a3d62; /* Dark teal background for navbar and footer */
+  color: #ffffff; /* White text color for navbar and footer */
+}
+
+/* Switch container styles */
+.switch-container {
+  position: fixed; /* Keeps the toggle fixed in position */
+  top: 20px; /* Distance from the top of the viewport */
+  right: 20px; /* Distance from the right of the viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center align horizontally */
+  gap: 0.5rem;
+  z-index: 1001; /* Ensure it's higher than the navbar */
+  background-color: inherit;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: add a slight shadow for better visibility */
+}
+
+/* Switch component styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+/* Label styling */
+.switch-container label {
+  font-size: 1rem; /* Font size for the label */
+  color: inherit; /* Use the inherited color for the text */
+  margin-left: 0.5rem; /* Spacing between the switch and label */
+}
+
+/* Additional Styles for Responsiveness */
+@media (max-width: 768px) {
+  .navbar, .footer {
+    padding: 1rem; /* Increase padding for better touch targets */
+  }
+
+  .footer-content {
+    flex-direction: column; /* Stack footer content vertically */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text */
+  }
+
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 0.5rem; /* Space between links */
+    width: 100%; /* Full width for mobile links */
+    text-align: center; /* Center align text */
+  }
+
+  .switch-container {
+    top: 10px; /* Reduce distance from the top for smaller screens */
+    right: 10px; /* Reduce distance from the right for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    padding: 0 1rem; /* Add horizontal padding for small screens */
+  }
+
+  .switch-container {
+    top: 5px; /* Further reduce top distance for very small screens */
+    right: 5px; /* Further reduce right distance for very small screens */
+  }
+}

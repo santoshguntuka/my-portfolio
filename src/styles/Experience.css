@@ -1,0 +1,73 @@
+.experience {
+  padding: 4rem 2rem;
+  background-color: inherit; /* Inherit background color from the parent container */
+}
+
+.experience h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: inherit; /* Inherit text color based on the current mode */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.experience-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-item {
+  background-color: inherit; /* Inherit background color */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2b6cb0; /* Consider changing this to a variable or a color that adapts to dark mode */
+}
+
+.experience-item h3 {
+  font-size: 1.25rem;
+  color: inherit; /* Inherit text color based on the current mode */
+  margin-top: 0.5rem;
+}
+
+.experience-item p {
+  font-size: 1rem;
+  color: inherit; /* Inherit text color based on the current mode */
+  margin: 0.5rem 0 1rem 0;
+}
+
+.experience-item ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.experience-item ul li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: inherit; /* Inherit text color based on the current mode */
+  line-height: 1.5;
+}
+
+/* Dark Mode Specific Styles */
+.dark-mode .experience-item {
+  background-color: #333; /* Dark background for experience items */
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Adjusted shadow for dark mode */
+}
+
+.dark-mode .experience-item h2 {
+  color: #90cdf4; /* Light blue for headings in dark mode */
+}
+
+.dark-mode .experience-item h3,
+.dark-mode .experience-item p,
+.dark-mode .experience-item ul li {
+  color: #cbd5e0; /* Light grey text color for dark mode */
+}
