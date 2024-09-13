@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  // Import Routes and Route
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Projects from './components/Projects';
@@ -23,7 +23,8 @@ function AppContent() {
           <Route path="*" element={<Home />} /> {/* Fallback to Home for unknown routes */}
         </Routes>
       </div>
-      {/* Footer is removed here */}
+      {/* Optionally, re-add Footer here */}
+      {/* <Footer /> */}
     </div>
   );
 }
