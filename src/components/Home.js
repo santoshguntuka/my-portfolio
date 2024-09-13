@@ -9,7 +9,7 @@ function Home() {
           <h1>Hey, I'm Santosh Guntuka</h1>
           <p>Software Developer</p>
           <a
-            href={`${process.env.PUBLIC_URL}/cs.pdf`}
+            href={`${process.env.PUBLIC_URL}/santoshguntuka_resume.pdf`}
             download="santosh_guntuka_Resume.pdf"
             className="btn-resume"
           >
